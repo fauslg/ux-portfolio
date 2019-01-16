@@ -618,3 +618,13 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.homepage {
+  &__title {
+  text-align: center;
+  margin-top: 20px;
+  }
+  &__paragraph {
+    text-align: center;
+  }
+}
