@@ -3,8 +3,9 @@
   My UX Portfolio
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is my UX Portfolio where I published some UX case studies. It's built using <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>.
 
+<div style="display:none;">
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
@@ -88,5 +89,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
+</div>
 <!-- AUTO-GENERATED-CONTENT:END -->
