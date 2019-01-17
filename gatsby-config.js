@@ -17,6 +17,17 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        //custom: {
+        //  families: ['SchnyderS', 'Circular']
+        // }
+        google: {
+          families: ['EB Garamond', 'Roboto']
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

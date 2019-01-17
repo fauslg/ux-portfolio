@@ -1,5 +1,50 @@
+@font-face {
+  font-family: 'SchnyderS';
+  src: url( '../fonts/SchnyderS-Light-Web.eot') format('eot');
+  src: url( '../fonts/SchnyderS-Light-Web.eot?#iefix') format('embedded-opentype'),
+       url( '../fonts/SchnyderS-Light-Web.woff') format('woff'),
+       url( '../fonts/SchnyderS-Light-Web.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SchnyderS';
+  src: url( '../fonts/SchnyderS-Demi-Web.eot') format('eot');
+  src: url( '../fonts/SchnyderS-Demi-Web.eot?#iefix') format('embedded-opentype'),
+       url( '../fonts/SchnyderS-Demi-Web.woff') format('woff'),
+       url( '../fonts/SchnyderS-Demi-Web.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url( '../fonts/lineto-circular-pro-book.eot') format('eot');
+  src: url( '../fonts/lineto-circular-pro-book.woff') format('woff'),
+       url( '../fonts/lineto-circular-pro-book.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url( '../fonts/lineto-circular-pro-medium.eot') format('eot');
+  src: url( '../fonts/lineto-circular-pro-medium.woff') format('woff'),
+       url( '../fonts/lineto-circular-pro-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url( '../fonts/lineto-circular-pro-bold.eot') format('eot');
+  src: url( '../fonts/lineto-circular-pro-bold.woff') format('woff'),
+       url( '../fonts/lineto-circular-pro-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 html {
-  font-family: sans-serif;
+  font-family: 'Circular', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -198,8 +243,9 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
+  font-family: 'Circular', serif;
+  font-weight: 300;
+  font-size: 18px;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -619,12 +665,77 @@ pre tt:after {
   }
 }
 
+@mixin font-weight($weight) {
+  $weights: (
+    thin: 100,
+    extra-light: 200,
+    ultra-light: 200,
+    light: 300,
+    normal: 400,
+    book: 400,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    demi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    ultra-bold: 900,
+    heavy: 900,
+    black: 900,
+    ultra: 900,
+    ultra-black: 900,
+    extra-ultra: 900
+  );
+
+  $output: $weight;
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+  font-weight: $output;
+}
+
 .homepage {
   &__title {
-  text-align: center;
-  margin-top: 20px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 42px;
+    line-height: 47px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    &--black {
+      font-weight: 900;
+    }
+  }
+  &__subheading {
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
   }
   &__paragraph {
+    font-family: 'Roboto', sans-serif;
     text-align: center;
+  }
+}
+
+.font {
+  &-normal {
+    font-weight: 400;
+  }
+  &-medium {
+    font-weight: 500;
+  }
+  &-semi-bold {
+    font-weight: 600;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+  &-extra-bold {
+    font-weight: 800;
   }
 }
